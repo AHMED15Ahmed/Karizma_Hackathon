@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Recettes{% endblock %}
+
+{% block content %}
+    <h2>Recettes</h2>
+    <form class="form-inline mb-2">
+        <input class="form-control mr-sm-2" type="search" placeholder="Rechercher" aria-label="Search" id="searchInput">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="searchRecipes()">Rechercher</button>
+    </form>
+    <ul id="recipeList">
+        {% for recipe in recipes %}
+            <li>
+                <h3>{{ recipe.name }}</h3>
+                <p>Ingrédients: {{ recipe.ingredients }}</p>
+                <p>Préparation: {{ recipe.preparation_time }}</p>
+                <!-- Ajoutez d'autres détails de la recette ici -->
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

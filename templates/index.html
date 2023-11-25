@@ -1,0 +1,187 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Add the Bootstrap responsive meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Recipe App Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- Add other JavaScript files or scripts here -->
+    <!-- Add your custom CSS or stylesheets here -->
+
+    <style>
+        body {
+            background-color: #007bff; /* Blue background color */
+            color: #130a0a; /* White text color */
+            padding-top: 50px; /* Adjusted top padding for the fixed navbar */
+        }
+
+        .container {
+            background-color: #11dfd5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        .dropdown-menu {
+            position: relative;
+            display: none;
+        }
+
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 10px;
+        }
+
+        .get-started {
+            font-size: 18px;
+        }
+        .search-button {
+            margin-top: 20px; /* Add margin to position the button below the feature list */
+        }
+        #search-form-wrap {
+        text-align: center;
+        }
+
+        #search-form {
+        display: inline-block;
+        text-align: left;
+        }
+
+        #query {
+        padding: 5px;
+        }
+
+        button {
+        padding: 5px 10px;
+        }
+
+        #gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .image-container {
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    #flex {
+            display: flex;
+        }
+
+    #flex a {
+        flex: 1;
+        margin: 5px; /* Add margin for spacing between images */
+    }
+
+    #flex img {
+        width: 100%; /* Make sure images fill the available width */
+        height: auto; /* Maintain the aspect ratio */
+    }
+    
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Recipe App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recipes">My Recipes</a>
+                </li>
+                <!-- Add the Features dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Features
+                    </a>
+                    <div class="dropdown-menu">
+                        <ul class="feature-list">
+                            <li>Share your Recipes.</li>
+                            <li>Mod\Delete </li>
+                            <li>Visualise recipes.</li>
+                            <li>Add Others fct ...</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mt-5">
+        <h1 class="text-center">Welcome to the Recipe App</h1>
+         <!-- Add the "Search for recipes" button in the center of the page -->
+        <!-- <button class="btn btn-primary search-button">Search for recipes</button> -->
+        
+        <div id="search-form-wrap">
+            <form id="search-form">
+              <input type="search" id="query" name="q" placeholder="Search Your Recette here ...">
+              <button>Search</button>
+            </form>
+          </div>
+    <!-- Add the image in the center of the page -->
+    <!-- <img src="/static/images/recette_partg.jpeg" alt="Recipe Image" class="center-image"> -->    
+    </div>
+        <div id="flex">
+          <a href="/static/images/i1.jpg" target="_blank" rel="">
+          <img src="/static/images/i1.jpg" alt="Image 1"> </a>
+          <a href="/static/images/i1.jpg" target="_blank" rel="">
+          <img src="/static/images/i2.jpg" alt="Image 2"> </a>
+          <a href="/static/images/i1.jpg" target="_blank" rel="">
+          <img src="/static/images/i3.jpg" alt="Image 3"> </a>
+          <a href="/static/images/i1.jpg" target="_blank" rel="">
+          <img src="/static/images/i4.jpg" alt="Image 4"> </a>
+       
+        <!-- Add more image containers as needed -->
+        </div>
+        <br>
+        </div>
+        <div id="flex">
+        <a href="/static/images/i1.jpg" target="_blank" rel="">
+        <img src="/static/images/i1.jpg" alt="Image 1"> </a>
+        <a href="/static/images/i1.jpg" target="_blank" rel="">
+        <img src="/static/images/i2.jpg" alt="Image 2"> </a>
+        <a href="/static/images/i1.jpg" target="_blank" rel="">
+        <img src="/static/images/i3.jpg" alt="Image 3"> </a>
+        <a href="/static/images/i1.jpg" target="_blank" rel="">
+        <img src="/static/images/i4.jpg" alt="Image 4"> </a>
+
+        <!-- Add more image containers as needed -->
+        </div>
+</body>
+</html>
